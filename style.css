@@ -1,4 +1,4 @@
-/* ESTILO GERAL */
+/* ESTILO GERAL GLOBAL */
 * {
     margin: 0;
     padding: 0;
@@ -47,7 +47,7 @@ form .btn-enviar input:hover {
     transform: scale(1.05);
 }
 
-/* ESTILO DO CABEÇALHO */
+/* ESTILO DO CABEÇALHO GLOBAL */
 header {
     padding: 40px 4%;
 }
@@ -80,7 +80,7 @@ header nav.menu-desktop ul li {
     padding: 0 40px;
 }
 
-/* ESTILO DO MENU MOBILE */
+/* ESTILO DO MENU MOBILE GLOBAL */
 .btn-abrir-menu i {
     color: blueviolet;
     font-size: 40px;
@@ -143,7 +143,7 @@ header nav.menu-desktop ul li {
     display: none;
 }
 
-/* ESTILO DO TOPO DO SITE */
+/* ESTILO DO TOPO DO SITE GLOBAL */
 section.topo-do-site {
     padding: 40px 4%;
 }
@@ -174,12 +174,28 @@ section.topo-do-site .flex {
     animation: elevar 2s ease-in-out infinite alternate;
 }
 
-section.img-contato-animado .flex{
+/* ESTILOS E ANIMAÇÕES UNIVERSAIS */
+section.img-global-animado .flex{
     justify-content: center;
     align-items: center;
+    margin: 40px 4%;
+    margin-top: -30px;
 }
 
-.img-contato-animado .animacao-contato img {
+.img-global-animado .animacao-global img {
+    position: relative;
+    animation: elevar 2s ease-in-out infinite alternate;
+}
+
+section.fa-jin .animacao-global {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 4%;
+    margin-top: -60px;
+}
+
+.fa-jin .animacao-global img{
     position: relative;
     animation: elevar 2s ease-in-out infinite alternate;
 }
@@ -194,7 +210,7 @@ section.img-contato-animado .flex{
     }
 }
 
-/* ESTILO DAS ESPECIALIDADES */
+/* ESTILO DAS ESPECIALIDADES GLOBAL */
 section.especialidades {
     padding: 40px 4%;
 }
@@ -274,10 +290,62 @@ section.sobre .flex {
     transition: .5s;
 }
 
-/* ESTILO DO PORTFÓLIO */
+/* ESTILO DO PORTFÓLIO GLOBAL*/
 section.portfolio {
     padding: 80px 4%;
     box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.131);
+}
+
+/* ESTILO DOS CARDS PROJETOS */
+section.card-projetos {
+    padding: 40px 4%;
+}
+
+section.card-projetos .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card-box {
+    flex: 1 1 18%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card-projetos .card-box {
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .5s;
+}
+
+.card-projetos .card-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.638);
+}
+
+.card-projetos .card-box i {
+    font-size: 30px;
+    color: blueviolet;
+}
+
+.card-projetos .card-box h3 {
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+.fa-jin-h2 {
+    text-align: center;
+    color: white;
+    margin: 65px 4%;
+    margin-bottom: -35px;
+    font-size: 35px;
+}
+
+.fa-jin-h2 span {
+    color: blueviolet;
 }
 
 section.portfolio .flex {
@@ -322,7 +390,7 @@ section.portfolio .flex {
     opacity: 1;
 }
 
-/* ESTILO DO FORM DE CONTATO */
+/* ESTILO DO FORM DE CONTATO GLOBAL */
 section.forms {
     padding: 80px 4%;
 }
@@ -368,7 +436,7 @@ form .btn-enviar input {
     transition: .5s;
 }
 
-/* ESTILO DO RODAPÉ */
+/* ESTILO DO RODAPÉ GLOBAL*/
 footer {
     padding: 30px 4%;
     box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.131);
@@ -399,7 +467,7 @@ footer .line-footer p a {
 
 @media screen and (max-width: 1020px) {
 
-    /* RESPONSIVO DAS CLASSES GERAIS */
+    /* RESPONSIVO DAS CLASSES GERAIS GLOBAL */
     .flex {
         flex-direction: column;
     }
@@ -409,13 +477,13 @@ footer .line-footer p a {
         line-height: 30px;
     }
 
-    /* RESPONSIVO DO CABEÇALHO */
+    /* RESPONSIVO DO CABEÇALHO GLOBAL */
     .menu-desktop,
     .btn-contato {
         display: none;
     }
 
-    /* RESPONSIVIDADE DO TOPO DO SITE */
+    /* RESPONSIVIDADE DO TOPO DO SITE GLOBAL */
     section.topo-do-site .flex {
         gap: 40px;
     }
@@ -432,12 +500,12 @@ footer .line-footer p a {
         width: 100%;
     }
 
-    /* RESPONSIVO DAS ESPECIALIDADES */
+    /* RESPONSIVO DAS ESPECIALIDADES GLOBAL */
     section.especialidades {
         padding: 40px 8%;
     }
 
-    /* RESPONSIVO DO SOBRE */
+    /* RESPONSIVO DO SOBRE GLOBAL */
     section.sobre {
         padding: 80px 8%;
     }
@@ -452,8 +520,12 @@ footer .line-footer p a {
         text-align: center;
     }
 
-    /* RESPONSIVO DO PORTFÓLIO */
+    /* RESPONSIVO DO PORTFÓLIO GLOBAL */
     section.portfolio {
+        padding: 80px 8%;
+    }
+
+    section.card-projetos {
         padding: 80px 8%;
     }
 
@@ -467,7 +539,7 @@ footer .line-footer p a {
         gap: 60px;
     }
 
-    /* RESPONSIVO DO RODAPÉ */
+    /* RESPONSIVO DO RODAPÉ GLOBAL */
     footer .flex {
         flex-direction: column;
     }
