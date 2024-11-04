@@ -102,7 +102,7 @@ header nav.menu-desktop ul li {
     width: 70%;
 }
 
-.menu-mobile.abrir-menu ~ .overlay-menu{
+.menu-mobile.abrir-menu~.overlay-menu {
     display: block;
 }
 
@@ -170,6 +170,16 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site .img-topo-site img {
+    position: relative;
+    animation: elevar 2s ease-in-out infinite alternate;
+}
+
+section.img-contato-animado .flex{
+    justify-content: center;
+    align-items: center;
+}
+
+.img-contato-animado .animacao-contato img {
     position: relative;
     animation: elevar 2s ease-in-out infinite alternate;
 }
