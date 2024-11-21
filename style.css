@@ -312,6 +312,12 @@ section.card-projetos .flex {
     flex: 1 1 18%;
     box-sizing: border-box;
     text-align: center;
+    cursor: pointer;
+}
+
+.card-box a {
+    color: white;
+    text-decoration: none;
 }
 
 .card-projetos .card-box {
