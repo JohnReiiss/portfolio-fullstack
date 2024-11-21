@@ -320,6 +320,12 @@ section.card-projetos .flex {
     text-decoration: none;
 }
 
+.card-box a:active {
+    color: white; 
+    text-decoration: none;
+}
+
+
 .card-projetos .card-box {
     color: white;
     padding: 40px;
