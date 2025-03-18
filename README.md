@@ -1,39 +1,77 @@
-## WELCOME TO MY PROFESSIONAL PORTFOLIO 🗂️
+# Bem-vindo ao Meu Portfólio Profissional 🗂️
 
-## Portfolio Home
-<img width="950" alt="{797A90CE-3251-43AE-8BA1-212113633453}" src="https://github.com/user-attachments/assets/6eb34e66-0f95-4f83-a39a-e8c1d7c8c606" />
+## Página Inicial
+<img width="950" alt="Portfolio Home" src="https://github.com/user-attachments/assets/6eb34e66-0f95-4f83-a39a-e8c1d7c8c606" />
 
-The portfolio home page was designed with a navigation menu that brings together all the most important sections of the project, all with divs and navs properly marked in the HTML to keep the home page well organized.
-In addition, for a better user experience, I also added contrasting colors and images with animations, navigation transitions and animations such as hover on all buttons with a universal class.
+A página inicial do portfólio foi projetada com um menu de navegação que agrupa todas as seções mais importantes do projeto. Todas as divs e elementos de navegação foram devidamente estruturados no HTML para manter a página organizada.
 
-## Specialties Page
-<img width="950" alt="image" src="https://github.com/user-attachments/assets/4a4ce8be-0a87-49d1-a0e6-ffb36933e8c1" />
-<img width="950" alt="{DF86DF11-713A-4C27-9730-D3719F5593FB}" src="https://github.com/user-attachments/assets/00862824-93b8-4725-8983-bfd477cb9b67" />
+Para uma melhor experiência do usuário, foram adicionadas cores contrastantes, imagens com animações, transições de navegação e efeitos *hover* em todos os botões, utilizando uma classe universal.
 
-In the "my specialties" tab I used a section with 5 divs, all of which I styled via CSS to create personalized and animated cards for a better user experience.
+---
 
-## About Page
-<img width="950" alt="image" src="https://github.com/user-attachments/assets/63597caf-0c6f-4b0f-b6f5-92a05b0fbd47" />
+## Página de Especialidades
+<img width="950" alt="Especialidades 1" src="https://github.com/user-attachments/assets/4a4ce8be-0a87-49d1-a0e6-ffb36933e8c1" />
+<img width="950" alt="Especialidades 2" src="https://github.com/user-attachments/assets/00862824-93b8-4725-8983-bfd477cb9b67" />
 
-In the about tab, I kept the code organized, focusing on bringing a bit of my personality and personal presentation, working with the div elements in a structured way and combining the page's design with a beautiful header and footer, with contact buttons for my social networks, my email and a clean logo for this project.
+Na aba "Minhas Especialidades", utilizei uma seção com cinco *divs*, todas estilizadas via CSS para criar cartões personalizados e animados, proporcionando uma melhor experiência ao usuário.
 
-## Projects Page
-<img width="950" alt="{6391C07A-5B52-4059-9FAC-9D7BCC5F2FB1}" src="https://github.com/user-attachments/assets/f5b13f77-67fb-413d-a405-4ce0e5fcc09f" />
-<img width="950" alt="{1F6DB174-AA09-4B13-BBA6-29DC14EF48DC}" src="https://github.com/user-attachments/assets/35134738-a582-42b7-8759-8eb761dfac02" />
+---
 
-The projects tab is my favorite and the one I consider the most important of this entire project, since I decided to put my main projects and demonstrate in this section the mastery of the technologies I use. Furthermore, there is a strong connection between this page and my Github, everything on this page is properly hosted and versioned on Github, the principles and code structuring of this page are the same as the others, since I worked with universal classes, so the hover applied to the cards of my skills is the same applied here, avoiding repetitions of the same properties in my code and making it lighter and optimized for web browsers.
+## Página Sobre Mim
+<img width="950" alt="Sobre Mim" src="https://github.com/user-attachments/assets/63597caf-0c6f-4b0f-b6f5-92a05b0fbd47" />
 
-## Contact Page
-<img width="950" alt="{289D195B-1FD0-4B8E-8FDA-3802673129B2}" src="https://github.com/user-attachments/assets/9d3f5879-b62f-47d0-bd0a-9a0ff44ee12d" />
-<img width="950" alt="{30CB2134-36EE-4110-87AC-A0E685A88980}" src="https://github.com/user-attachments/assets/1ab583a6-6e3c-4ca4-8c3b-866dba7144ae" />
+Na aba "Sobre", mantive o código organizado com foco em apresentar minha personalidade e história profissional. Trabalhei com elementos *div* estruturados e combinei o design da página com um cabeçalho e rodapé bem elaborados, contendo botões de contato para minhas redes sociais, e-mail e um logotipo limpo para este projeto.
 
-And finally, in the contacts tab I used a forms API to connect with my email, this way everything in this portfolio is functional, if you want to send me a form it will fall into my email box, just fill in the data as the form requests and click on the input button, the 3d icon design I used, I made it so that it would work in all the tabs of my website, and with the same animation using keyframes in CSS, this is my portfolio, it was my first project using HTML5, CSS3 and JS, I hope you liked it, if you want to contact me, all my social networks are synchronized both in my portfolio and in my Github.
+---
 
+## Página de Projetos
+<img width="950" alt="Projetos 1" src="https://github.com/user-attachments/assets/f5b13f77-67fb-413d-a405-4ce0e5fcc09f" />
+<img width="950" alt="Projetos 2" src="https://github.com/user-attachments/assets/35134738-a582-42b7-8759-8eb761dfac02" />
 
+A aba de projetos é a minha favorita e a mais importante do portfólio, pois apresenta meus principais trabalhos e demonstra meu domínio sobre as tecnologias utilizadas. Essa seção possui uma forte integração com meu GitHub, garantindo que tudo esteja devidamente hospedado e versionado.
 
+A estrutura do código segue os mesmos princípios das outras páginas, utilizando classes universais. Assim, o efeito *hover* aplicado aos cartões das minhas habilidades é o mesmo utilizado aqui, reduzindo repetição de código e otimizando o desempenho para navegadores.
 
+---
 
+## Página de Contato
+<img width="950" alt="Contato 1" src="https://github.com/user-attachments/assets/9d3f5879-b62f-47d0-bd0a-9a0ff44ee12d" />
+<img width="950" alt="Contato 2" src="https://github.com/user-attachments/assets/1ab583a6-6e3c-4ca4-8c3b-866dba7144ae" />
 
+Na aba de contatos, utilizei uma API de formulários para conectar diretamente com meu e-mail, tornando o portfólio totalmente funcional. Caso queira me enviar uma mensagem, basta preencher os dados solicitados e clicar no botão de envio.
 
+O design dos ícones em 3D foi criado para manter a identidade visual em todas as páginas do site, utilizando animações com *keyframes* em CSS.
 
+---
+
+## Tecnologias Utilizadas
+- **HTML5**: Estrutura semântica das páginas.
+- **CSS3**: Estilização responsiva e animações.
+- **JavaScript**: Interatividade e dinamismo.
+
+---
+
+## Como Visualizar o Projeto
+Você pode acessar meu portfólio diretamente pelo link abaixo:
+
+🔗 **[Acesse meu Portfólio](https://johnreiiss.github.io/Portfolio-Johnatan-Hayabusa/)**
+
+Caso prefira clonar o repositório e rodar localmente:
+
+```bash
+git clone https://github.com/JohnReiiss/Portfolio-Johnatan-Hayabusa.git
+```
+
+Abra o arquivo `index.html` em seu navegador para visualizar o projeto.
+
+---
+
+## Contato
+Se quiser saber mais sobre meu trabalho ou discutir oportunidades, entre em contato:
+
+- **E-mail:** johnatan.reiiss@icloud.com
+- **LinkedIn:** [linkedin.com/in/johnatan-hayabusa](https://www.linkedin.com/in/johnatan-hayabusa)
+- **GitHub:** [github.com/JohnReiiss](https://github.com/JohnReiiss)
+
+Obrigado por visitar meu portfólio! Espero que goste do projeto. 🚀
 
