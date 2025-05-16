@@ -68,12 +68,14 @@ Abra o arquivo `index.html` em seu navegador para visualizar o projeto.
 
 ---
 
-## Contato
-Se quiser saber mais sobre meu trabalho ou discutir oportunidades, entre em contato:
+## ✉️ Contato
 
+- **Desenvolvedor**: [Johnatan dos Santos Reis]  
 - **E-mail:** johnatan.reiiss@icloud.com
 - **LinkedIn:** [linkedin.com/in/johnatan-hayabusa](https://www.linkedin.com/in/johnatan-dos-santos-reis-945092b7/)
-- **GitHub:** [github.com/JohnReiiss](https://github.com/JohnReiiss)
+- **GitHub:** [github.com/JohnReiiss](https://github.com/JohnReiiss)  
+
+---
 
 Obrigado por visitar meu portfólio! Espero que goste do projeto. 🚀
 
