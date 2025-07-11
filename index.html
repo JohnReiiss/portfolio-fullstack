@@ -1,235 +1,400 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- FECHAMENTO GOOGLE FONTS -->
     <!-- BOOTSTRAP ICONS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <!-- FECHAMENTO DO BOOTSTRAP ICONS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <script src="menu.js" defer></script>
 
     <title>Portfólio Johnatan Hayabusa</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <div class="interface">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/NEW LOGO.png" alt="logo do portfólio" width="200" height="auto">
-                </a>
-            </div><!--fechamento da div logo-->
+      <div class="interface">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="images/NEW LOGO.png"
+              alt="logo do portfólio"
+              width="200"
+              height="auto"
+            />
+          </a>
+        </div>
+        <!--fechamento da div logo-->
 
-            <nav class="menu-desktop">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="index.especialidades.html">Especialidades</a></li>
-                    <li><a href="index-sobre.html">Sobre</a></li>
-                    <li><a href="index-projetos.html">Projetos</a></li>
-                </ul>
+        <nav class="menu-desktop">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.especialidades.html">Especialidades</a></li>
+            <li><a href="index-sobre.html">Sobre</a></li>
+            <li><a href="index-projetos.html">Projetos</a></li>
+          </ul>
+        </nav>
 
-            </nav>
+        <div class="btn-contato">
+          <a href="index-contato.html">
+            <button>Contato</button>
+          </a>
+        </div>
+        <!--fechamento da div btn-contato-->
 
-            <div class="btn-contato">
-                <a href="index-contato.html">
-                    <button>Contato</button>
-                </a>
-            </div><!--fechamento da div btn-contato-->
+        <div class="btn-abrir-menu" id="btn-menu">
+          <i class="bi bi-list"></i>
+        </div>
+        <!--fechamento da div btn-abrir-menu-->
 
-            <div class="btn-abrir-menu" id="btn-menu">
-                <i class="bi bi-list"></i>
-            </div><!--fechamento da div btn-abrir-menu-->
+        <div class="menu-mobile" id="menu-mobile">
+          <div class="btn-fechar">
+            <i class="bi bi-x-lg"></i>
+          </div>
+          <!--fechamento da div btn-fechar-->
 
-            <div class="menu-mobile" id="menu-mobile">
-                <div class="btn-fechar">
-                    <i class="bi bi-x-lg"></i>
-                </div><!--fechamento da div btn-fechar-->
+          <nav>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="index.especialidades.html">Especialidades</a></li>
+              <li><a href="index-sobre.html">Sobre</a></li>
+              <li><a href="index-projetos.html">Projetos</a></li>
+              <li><a href="index-contato.html">Contato</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!--fechamento da div menu-mobile-->
 
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="index.especialidades.html">Especialidades</a></li>
-                        <li><a href="index-sobre.html">Sobre</a></li>
-                        <li><a href="index-projetos.html">Projetos</a></li>
-                        <li><a href="index-contato.html">Contato</a></li>
-                    </ul>
-                </nav>
-            </div><!--fechamento da div menu-mobile-->
-
-            <div class="overlay-menu" id="overlay-menu"></div>
-
-        </div><!--fechamento da div interface-->
+        <div class="overlay-menu" id="overlay-menu"></div>
+      </div>
+      <!--fechamento da div interface-->
     </header>
 
     <main>
-        <section class="topo-do-site">
-            <div class="interface">
-                <div class="flex">
-                    <div class="txt-topo-site">
-                        <h1><span>JOHNATAN HAYABUSA</span>, DESENVOLVEDOR FULL STACK E WEB DESIGN <span>.</span></h1>
-                        <p>Seja bem vindo(a) ao meu porfólio, sou desenvolvedor web full stack especializado em criar experiências visuais impactantes, com forte domínio em design, UX/UI e nas mais recentes tecnologias front-end para proporcionar interfaces modernas, responsivas, funcionais e centradas na qualidade da experiência do usuário.</p>
+      <section class="topo-do-site">
+        <div class="interface">
+          <div class="flex">
+            <div class="txt-topo-site">
+              <h1>
+                <span>JOHNATAN HAYABUSA</span>, DESENVOLVEDOR FULL STACK E WEB
+                DESIGN <span>.</span>
+              </h1>
+              <p>
+                Seja bem vindo(a) ao meu porfólio, sou desenvolvedor web full
+                stack especializado em criar experiências visuais impactantes,
+                com forte domínio em design, UX/UI e nas mais recentes
+                tecnologias front-end para proporcionar interfaces modernas,
+                responsivas, funcionais e centradas na qualidade da experiência
+                do usuário.
+              </p>
 
-                        <div class="btn-contato">
-                            <a href="index-contato.html">
-                                <button>Entre em contato</button>
-                            </a>
-                        </div>
-                    </div><!--fechamento da div txt-topo-site-->
+              <div class="btn-contato">
+                <a href="index-contato.html">
+                  <button>Entre em contato</button>
+                </a>
+              </div>
+            </div>
+            <!--fechamento da div txt-topo-site-->
 
-                    <div class="img-topo-site">
-                        <img src="images/img animação home.png" alt="imagem da animação" width="200" height="auto">
-                    </div><!--fechamento da div img-topo-site-->
-                </div><!--fechamento da div flex-->
-            </div><!--fechamento da div interface-->
-        </section><!--fechamento da section topo-do-site-->
+            <div class="img-topo-site">
+              <img
+                src="images/img animação home.png"
+                alt="imagem da animação"
+                width="200"
+                height="auto"
+              />
+            </div>
+            <!--fechamento da div img-topo-site-->
+          </div>
+          <!--fechamento da div flex-->
+        </div>
+        <!--fechamento da div interface-->
+      </section>
+      <!--fechamento da section topo-do-site-->
 
-        <section class="especialidades">
-            <div class="interface">
-                <h2 class="titulo">MINHAS <span>SKILLS.</span></h2>
-                <div class="flex">
-                    <div class="skills-box">
-                        <i class="bi bi-code-square"></i>
-                        <h3>Website</h3>
-                        <p>Sou um desenvolvedor web especializado na criação de sites modernos e funcionais, com foco em
-                            performance, usabilidade e design responsivo. Utilizando as mais recentes tecnologias do
-                            mercado, como HTML5, CSS3 e JavaScript, meu objetivo é transformar ideias em experiências
-                            digitais que gerem resultados.</p>
-                    </div><!--fechamento da div slills-box-->
-                    <div class="skills-box">
-                        <i class="bi bi-cart3"></i>
-                        <h3>Lojas Online</h3>
-                        <p>Ofereço serviços de desenvolvimento de lojas online completas, com foco em soluções
-                            personalizadas para atender às necessidades do seu negócio. Desde a escolha da plataforma
-                            adequada até a implementação de recursos de pagamento, logística e segurança, crio lojas
-                            virtuais otimizadas para oferecer uma excelente experiência de compra ao cliente. Meu
-                            objetivo é otimizar a presença online da sua empresa, vendendo mais, com sites intuitivos,
-                            responsivos e fáceis de gerenciar.</p>
-                    </div><!--fechamento da div slills-box-->
-                    <div class="skills-box">
-                        <i class="bi bi-wordpress"></i>
-                        <h3>Blogs</h3>
-                        <p>Desenvolvo blogs personalizados, focados em design atraente, navegação intuitiva e fácil
-                            gerenciamento de conteúdo. Utilizando ferramentas modernas, plataformas otimizadas para SEO,
-                            que ajudam a aumentar sua visibilidade online e a conectar-se com seu público-alvo. Seja
-                            para compartilhar conhecimentos, experiências ou promover sua marca, oferecer soluções que
-                            transformam suas ideias em blogs profissionais e envolvidos.</p>
-                    </div><!--fechamento da div slills-box-->
-                    <div class="skills-box">
-                        <i class="bi bi-phone-fill"></i>
-                        <h3>UX/UI</h3>
-                        <p>Ofereço serviços de desenvolvimento web focados em UX/UI, criando interfaces intuitivas e
-                            atraentes que priorizam a experiência do usuário, combinando funcionalidade, acessibilidade
-                            e design moderno.</p>
-                    </div><!--fechamento da div slills-box-->
-                </div><!--fechamento da div flex-->
-            </div><!--fechamento da div interface-->
-        </section><!--fechamento da section especialidades-->
+      <section class="especialidades">
+        <div class="interface">
+          <h2 class="titulo">MINHAS <span>SKILLS.</span></h2>
+          <div class="flex">
+            <div class="skills-box">
+              <i class="bi bi-code-square"></i>
+              <h3>Website</h3>
+              <p>
+                Sou um desenvolvedor web especializado na criação de sites
+                modernos e funcionais, com foco em performance, usabilidade e
+                design responsivo. Utilizando as mais recentes tecnologias do
+                mercado, como HTML5, CSS3 e JavaScript, meu objetivo é
+                transformar ideias em experiências digitais que gerem
+                resultados.
+              </p>
+            </div>
+            <!--fechamento da div slills-box-->
+            <div class="skills-box">
+              <i class="bi bi-cart3"></i>
+              <h3>Lojas Online</h3>
+              <p>
+                Ofereço serviços de desenvolvimento de lojas online completas,
+                com foco em soluções personalizadas para atender às necessidades
+                do seu negócio. Desde a escolha da plataforma adequada até a
+                implementação de recursos de pagamento, logística e segurança,
+                crio lojas virtuais otimizadas para oferecer uma excelente
+                experiência de compra ao cliente. Meu objetivo é otimizar a
+                presença online da sua empresa, vendendo mais, com sites
+                intuitivos, responsivos e fáceis de gerenciar.
+              </p>
+            </div>
+            <!--fechamento da div slills-box-->
+            <div class="skills-box">
+              <i class="bi bi-wordpress"></i>
+              <h3>Blogs</h3>
+              <p>
+                Desenvolvo blogs personalizados, focados em design atraente,
+                navegação intuitiva e fácil gerenciamento de conteúdo.
+                Utilizando ferramentas modernas, plataformas otimizadas para
+                SEO, que ajudam a aumentar sua visibilidade online e a
+                conectar-se com seu público-alvo. Seja para compartilhar
+                conhecimentos, experiências ou promover sua marca, oferecer
+                soluções que transformam suas ideias em blogs profissionais e
+                envolvidos.
+              </p>
+            </div>
+            <!--fechamento da div slills-box-->
+            <div class="skills-box">
+              <i class="bi bi-phone-fill"></i>
+              <h3>UX/UI</h3>
+              <p>
+                Ofereço serviços de desenvolvimento web focados em UX/UI,
+                criando interfaces intuitivas e atraentes que priorizam a
+                experiência do usuário, combinando funcionalidade,
+                acessibilidade e design moderno.
+              </p>
+            </div>
+            <!--fechamento da div slills-box-->
+          </div>
+          <!--fechamento da div flex-->
+        </div>
+        <!--fechamento da div interface-->
+      </section>
+      <!--fechamento da section especialidades-->
 
-        <section class="sobre">
-            <div class="interface">
-                <div class="flex">
-                    <div class="img-sobre">
-                        <img src="images/foto de perfil conta microsoft.jpg" alt="img perfil portfólio" width="280"
-                            height="auto">
-                    </div><!--fechamento da div img-sobre-->
+      <section class="sobre">
+        <div class="interface">
+          <div class="flex">
+            <div class="img-sobre">
+              <img
+                src="images/foto de perfil conta microsoft.jpg"
+                alt="img perfil portfólio"
+                width="280"
+                height="auto"
+              />
+            </div>
+            <!--fechamento da div img-sobre-->
 
-                    <div class="txt-sobre">
-                        <h2>MUITO PRAZER, <span>SEJA BEM VINDO(A) AO MEU PORTFÓLIO.</span></h2>
-                        <p>Bem-vindo(a) ao meu portfólio! Me chamo Johnatan Hayabusa, tenho 24 anos e sou desenvolvedor web front-end atuando desde 2023. Meu hobby é ouvir música e viajar, e sou apaixonado por tudo que é geek e pop, como animes e games. Sou especializado em criar soluções digitais modernas e personalizadas. Utilizo as principais tecnologias de front-end, como HTML5, CSS3 e JavaScript com foco na responsividade e UX/UI design para desenvolver projetos que atendem às necessidades dos meus clientes.</p>
-                        <p>Minhas skills incluem HTML5, CSS3, JavaScript, além de frameworks como React e Angular. Minhas soft skills? Ah, sou um verdadeiro mago da comunicação, um ninja da resolução de problemas e um maestro da criatividade. Sempre pronto para colaborar e transformar ideias em realidade digital.</p>
-                        <p>Aqui, você encontrará exemplos de lojas online, landing pages atraentes, blogs desenvolvidos com WordPress e websites totalmente responsivos para todos os dispositivos. Explore e veja como posso transformar suas ideias em realidade digital!</p>
+            <div class="txt-sobre">
+              <h2>
+                MUITO PRAZER, <span>SEJA BEM VINDO(A) AO MEU PORTFÓLIO.</span>
+              </h2>
+              <p>
+                Olá! Me chamo
+                <strong>Johnatan Hayabusa</strong>, tenho 25 anos e sou um
+                <strong>desenvolvedor web full-stack</strong>, com atuação desde
+                2022 e foco principal em front-end. Tenho paixão por criar
+                experiências digitais modernas, responsivas e intuitivas. Fora
+                do código, meus hobbies incluem ouvir música, viajar, e tudo que
+                envolve o universo geek e pop — especialmente animes e games.
+              </p>
 
-                        <div class="btn-social">
-                            <a href="https://www.instagram.com/hayabusa.johnatan/?__pwa=1" target="_blank"><button><i
-                                        class="bi bi-instagram"></i></button></a>
-                            <a href="https://www.linkedin.com/in/johnatan-dos-santos-reis-945092b7/"
-                                target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
-                        </div><!--fechamento da div btn-social-->
-                    </div><!--fechamento da div txt-sobre-->
-                </div><!--fechamento da div flex-->
-            </div><!--fechamento da div interface-->
-        </section><!--fechamento da section sobre-->
+              <p>
+                <strong>Stacks Front-End:</strong><br />
+                Trabalho com as principais tecnologias do desenvolvimento web
+                moderno, como <strong>HTML5</strong>, <strong>CSS3</strong>,
+                <strong>JavaScript</strong>, <strong>Bootstrap</strong> e
+                <strong>React</strong>. Meu foco está sempre em responsividade,
+                acessibilidade e design centrado no usuário (UX/UI), buscando
+                entregar interfaces elegantes e funcionais para todos os
+                dispositivos.
+              </p>
 
-        <section class="portfolio">
-            <div class="interface">
-                <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
-                <div class="flex">
-                    <div class="img-port" style="background-image: url(images/website\ img.png);">
-                        <div class="overlay">Websites</div>
-                    </div>
-                    <div class="img-port" style="background-image: url(images/store\ img.png);">
-                        <div class="overlay">Lojas online</div>
-                    </div>
-                    <div class="img-port" style="background-image: url(images/blog\ img.png);">
-                        <div class="overlay">Blogs</div>
-                    </div>
-                </div><!--fechamento da div flex-->
-            </div><!--fechamento da div interface-->
-        </section><!--fechamento da section portfolio-->
+              <p>
+                <strong>Stacks Back-End:</strong><br />
+                No desenvolvimento back-end, utilizo
+                <strong>JavaScript com Node.js</strong> e
+                <strong>Express.js</strong> para construir APIs REST e RESTful
+                eficientes. Também trabalho com <strong>PHP</strong> em projetos
+                específicos. Em relação a bancos de dados, tenho experiência com
+                <strong>MySQL</strong> e <strong>MongoDB</strong>, garantindo
+                performance e integridade dos dados nas aplicações.
+              </p>
 
-        <section class="forms">
-            <div class="interface">
-                <h2 class="titulo">FALA <span>COMIGO.</span></h2>
+              <p>
+                <strong>Soft Skills:</strong><br />
+                Sou comunicativo, proativo, criativo e tenho facilidade em
+                resolver problemas de forma prática e colaborativa. Acredito no
+                trabalho em equipe e na transformação de boas ideias em soluções
+                digitais de impacto.
+              </p>
 
-                <form method="post" action="https://formspree.io/f/xnnqjkeb">
-                    <label>
-                        Your name:
-                        <input type="text" name="nome" placeholder="Seu nome completo:" required>
-                    </label>
-                    <label>
-                        Your e-mail:
-                        <input type="text" name="e-mail" placeholder="Seu e-mail:" required>
-                    </label>
-                    <label>
-                        Your cell phone:
-                        <input type="text" name="telefone" placeholder="Seu telefone:" required>
-                    </label>
-                    <label>
-                        Your message:
-                        <textarea name="message" placeholder="Sua mensagem" required></textarea>
-                    </label>
-                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
-                </form>
-            </div><!--fechamento da div interface-->
-        </section><!--fechamento da section forms-->
+              <p>
+                Neste portfólio, você encontrará projetos como lojas virtuais,
+                landing pages atrativas, blogs em WordPress e websites
+                totalmente responsivos. Sinta-se à vontade para explorar e
+                conhecer melhor meu trabalho — estou pronto para transformar a
+                sua ideia em realidade digital!
+              </p>
 
+              <div class="btn-social">
+                <a
+                  href="https://www.instagram.com/hayabusa.johnatan/?__pwa=1"
+                  target="_blank"
+                  ><button><i class="bi bi-instagram"></i></button
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/johnatan-dos-santos-reis-945092b7/"
+                  target="_blank"
+                  ><button><i class="bi bi-linkedin"></i></button
+                ></a>
+              </div>
+              <!--fechamento da div btn-social-->
+            </div>
+            <!--fechamento da div txt-sobre-->
+          </div>
+          <!--fechamento da div flex-->
+        </div>
+        <!--fechamento da div interface-->
+      </section>
+      <!--fechamento da section sobre-->
+
+      <section class="portfolio">
+        <div class="interface">
+          <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
+          <div class="flex">
+            <div
+              class="img-port"
+              style="background-image: url(images/website\ img.png)"
+            >
+              <div class="overlay">Websites</div>
+            </div>
+            <div
+              class="img-port"
+              style="background-image: url(images/store\ img.png)"
+            >
+              <div class="overlay">Lojas online</div>
+            </div>
+            <div
+              class="img-port"
+              style="background-image: url(images/blog\ img.png)"
+            >
+              <div class="overlay">Blogs</div>
+            </div>
+          </div>
+          <!--fechamento da div flex-->
+        </div>
+        <!--fechamento da div interface-->
+      </section>
+      <!--fechamento da section portfolio-->
+
+      <section class="forms">
+        <div class="interface">
+          <h2 class="titulo">FALE <span>COMIGO.</span></h2>
+
+          <form method="post" action="https://formspree.io/f/xnnqjkeb">
+            <label>
+              Your name:
+              <input
+                type="text"
+                name="nome"
+                placeholder="Seu nome completo:"
+                required
+              />
+            </label>
+            <label>
+              Your e-mail:
+              <input
+                type="text"
+                name="e-mail"
+                placeholder="Seu e-mail:"
+                required
+              />
+            </label>
+            <label>
+              Your cell phone:
+              <input
+                type="text"
+                name="telefone"
+                placeholder="Seu telefone:"
+                required
+              />
+            </label>
+            <label>
+              Your message:
+              <textarea
+                name="message"
+                placeholder="Sua mensagem"
+                required
+              ></textarea>
+            </label>
+            <div class="btn-enviar"><input type="submit" value="ENVIAR" /></div>
+          </form>
+        </div>
+        <!--fechamento da div interface-->
+      </section>
+      <!--fechamento da section forms-->
     </main>
 
     <footer>
-        <div class="interface">
-            <div class="line-footer">
-                <div class="flex">
-                    <div class="logo-footer">
-                        <img src="images/NEW LOGO.png" alt="logo do portfólio" width="150"
-                            height="auto">
-                    </div><!--fechamento da div logo-footer-->
-                    <div class="btn-social">
-                        <a href="https://www.instagram.com/hayabusa.johnatan/?__pwa=1" target="_blank"><button><i
-                                    class="bi bi-instagram"></i></button></a>
-                        <a href="https://www.linkedin.com/in/johnatan-dos-santos-reis-945092b7/"
-                            target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
-                    </div><!--fechamento da div btn-social-->
-                </div>
-            </div><!--fechamento da div line-footer-->
+      <div class="interface">
+        <div class="line-footer">
+          <div class="flex">
+            <div class="logo-footer">
+              <img
+                src="images/NEW LOGO.png"
+                alt="logo do portfólio"
+                width="150"
+                height="auto"
+              />
+            </div>
+            <!--fechamento da div logo-footer-->
+            <div class="btn-social">
+              <a
+                href="https://www.instagram.com/hayabusa.johnatan/?__pwa=1"
+                target="_blank"
+                ><button><i class="bi bi-instagram"></i></button
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/johnatan-dos-santos-reis-945092b7/"
+                target="_blank"
+                ><button><i class="bi bi-linkedin"></i></button
+              ></a>
+            </div>
+            <!--fechamento da div btn-social-->
+          </div>
+        </div>
+        <!--fechamento da div line-footer-->
 
-            <div class="line-footer borda">
-                <p><i class="bi bi-envelope-at-fill"></i><a
-                        href="mailto:johnatan.reiiss@yahoo.com">johnatan.reiiss@yahoo.com</a></p>
-            </div><!--fechamento da div line-footer-->
-        </div><!--fechamento da div interface-->
+        <div class="line-footer borda">
+          <p>
+            <i class="bi bi-envelope-at-fill"></i
+            ><a href="mailto:johnatan.reiiss@yahoo.com"
+              >johnatan.reiiss@yahoo.com</a
+            >
+          </p>
+        </div>
+        <!--fechamento da div line-footer-->
+      </div>
+      <!--fechamento da div interface-->
     </footer>
-
-</body>
-
+  </body>
 </html>
