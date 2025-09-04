@@ -1,7 +1,7 @@
 /* ARQUIVO PRINCIPAL DE ESTILOS */
 
 /* 1. Estilos Globais e Variáveis */
-@import url("_global.css");
+@import url("global.css");
 
 /* 2. Componentes Reutilizáveis */
 @import url("components/_header.css");
@@ -17,4 +17,4 @@
 @import url("sections/_contact.css");
 
 /* 4. Regras de Responsividade */
-@import url("_responsive.css");
+@import url("responsive.css");
