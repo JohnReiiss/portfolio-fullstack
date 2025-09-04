@@ -1,130 +1,189 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- FECHAMENTO GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- /GOOGLE FONTS -->
     <!-- BOOTSTRAP ICONS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- FECHAMENTO DO BOOTSTRAP ICONS -->
-    <link rel="stylesheet" href="style.css">
-
-    <script src="menu.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- /BOOTSTRAP ICONS -->
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="assets/src/css/style.css" />
+    <!-- /STYLE CSS -->
+    <!-- MENU JS -->
+    <script src="assets/src/js/menu.js" defer></script>
+    <!-- /MENU JS -->
 
     <title>Portfólio Johnatan Hayabusa</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <header>
-        <div class="interface">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/NEW LOGO.png" alt="logo do portfólio" width="200" height="auto">
-                </a>
-            </div><!--fechamento da div logo-->
+      <div class="interface">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="assets/images/NEW LOGO.png"
+              alt="logo do portfólio"
+              width="200"
+              height="auto"
+            />
+          </a>
+        </div>
+        <!--fechamento da div logo-->
 
-            <nav class="menu-desktop">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="index.especialidades.html">Especialidades</a></li>
-                    <li><a href="index-sobre.html">Sobre</a></li>
-                    <li><a href="index-projetos.html">Projetos</a></li>
-                </ul>
+        <nav class="menu-desktop">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index-projetos.html">Projetos</a></li>
+          </ul>
+        </nav>
 
-            </nav>
+        <div class="btn-contato">
+          <a href="index-contato.html">
+            <button>Contato</button>
+          </a>
+        </div>
+        <!--fechamento da div btn-contato-->
 
-            <div class="btn-contato">
-                <a href="index-contato.html">
-                    <button>Contato</button>
-                </a>
-            </div><!--fechamento da div btn-contato-->
+        <div class="btn-abrir-menu" id="btn-menu">
+          <i class="bi bi-list"></i>
+        </div>
+        <!--fechamento da div btn-abrir-menu-->
 
-            <div class="btn-abrir-menu" id="btn-menu">
-                <i class="bi bi-list"></i>
-            </div><!--fechamento da div btn-abrir-menu-->
+        <div class="menu-mobile" id="menu-mobile">
+          <div class="btn-fechar">
+            <i class="bi bi-x-lg"></i>
+          </div>
+          <!--fechamento da div btn-fechar-->
 
-            <div class="menu-mobile" id="menu-mobile">
-                <div class="btn-fechar">
-                    <i class="bi bi-x-lg"></i>
-                </div><!--fechamento da div btn-fechar-->
+          <nav>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="index-projetos.html">Projetos</a></li>
+              <li><a href="index-contato.html">Contato</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!--fechamento da div menu-mobile-->
 
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="index.especialidades.html">Especialidades</a></li>
-                        <li><a href="index-sobre.html">Sobre</a></li>
-                        <li><a href="index-projetos.html">Projetos</a></li>
-                        <li><a href="index-contato.html">Contato</a></li>
-                    </ul>
-                </nav>
-            </div><!--fechamento da div menu-mobile-->
-
-            <div class="overlay-menu" id="overlay-menu"></div>
-
-        </div><!--fechamento da div interface-->
+        <div class="overlay-menu" id="overlay-menu"></div>
+      </div>
+      <!--fechamento da div interface-->
     </header>
     <main>
-        <section class="img-global-animado">
-            <div class="interface">
-                <div class="flex">
-                    <div class="animacao-global">
-                        <img src="images/img animação fala comigo.png" alt="img fala comigo" width="350">
-                    </div><!--fechamento da div animacao-blobal-->
-                </div><!--fechamento da div flex-->
-            </div><!--fechamento da div interface-->
-        </section><!--fechamento da section img-global-animado-->
+      <section class="img-global-animado">
+        <div class="interface">
+          <div class="flex">
+            <div class="animacao-global">
+              <img
+                src="assets/images/img animação fala comigo.png"
+                alt="img fala comigo"
+                width="350"
+              />
+            </div>
+            <!--fechamento da div animacao-blobal-->
+          </div>
+          <!--fechamento da div flex-->
+        </div>
+        <!--fechamento da div interface-->
+      </section>
+      <!--fechamento da section img-global-animado-->
 
-        <section class="forms">
-            <div class="interface">
-                <h2 class="titulo">FALE <span>COMIGO.</span></h2>
+      <section class="forms">
+        <div class="interface">
+          <h2 class="titulo">FALE <span>COMIGO.</span></h2>
 
-                <form method="post" action="https://formspree.io/f/xnnqjkeb">
-                    <label>
-                        Your name:
-                        <input type="text" name="nome" placeholder="Seu nome completo:" required>
-                      </label>
-                    <label>
-                        Your e-mail:
-                        <input type="text" name="e-mail" placeholder="Seu e-mail:" required>
-                      </label>
-                    <label>
-                        Your cell phone:
-                        <input type="text" name="telefone" placeholder="Seu telefone:" required>
-                      </label>
-                    <label>
-                        Your message:
-                        <textarea name="message" placeholder="Sua mensagem" required></textarea>
-                      </label>
-                      <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
-                </form>
-            </div><!--fechamento da div interface-->
-        </section><!--fechamento da section forms-->
-        
+          <form method="post" action="https://formspree.io/f/xnnqjkeb">
+            <label>
+              <input
+                type="text"
+                name="nome"
+                placeholder="Seu nome completo:"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="text"
+                name="e-mail"
+                placeholder="Seu e-mail:"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="text"
+                name="telefone"
+                placeholder="Seu telefone:"
+                required
+              />
+            </label>
+            <label>
+              <textarea
+                name="message"
+                placeholder="Sua mensagem"
+                required
+              ></textarea>
+            </label>
+            <div class="btn-enviar"><input type="submit" value="ENVIAR" /></div>
+          </form>
+        </div>
+        <!--fechamento da div interface-->
+      </section>
+      <!--fechamento da section forms-->
     </main>
 
     <footer>
-        <div class="interface">
-            <div class="line-footer">
-                <div class="flex">
-                    <div class="logo-footer">
-                        <img src="images/NEW LOGO.png" alt="logo do portfólio" width="150" height="auto">
-                    </div><!--fechamento da div logo-footer-->
-                    <div class="btn-social">
-                        <a href="https://www.instagram.com/hayabusa.johnatan/?__pwa=1" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
-                        <a href="https://www.linkedin.com/in/johnatan-dos-santos-reis-945092b7/" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
-                    </div><!--fechamento da div btn-social-->
-                </div>
-            </div><!--fechamento da div line-footer-->
-               
-            <div class="line-footer borda">
-                <p><i class="bi bi-envelope-at-fill"></i><a href="mailto:johnatan.reiiss@yahoo.com">johnatan.reiiss@yahoo.com</a></p>
-            </div><!--fechamento da div line-footer-->
-        </div><!--fechamento da div interface-->
-    </footer>
+      <div class="interface">
+        <div class="line-footer">
+          <div class="flex">
+            <div class="logo-footer">
+              <img
+                src="assets/images/NEW LOGO.png"
+                alt="logo do portfólio"
+                width="150"
+                height="auto"
+              />
+            </div>
+            <!--fechamento da div logo-footer-->
+            <div class="btn-social">
+              <a
+                href="https://www.instagram.com/hayabusa.johnatan/?__pwa=1"
+                target="_blank"
+                ><button><i class="bi bi-instagram"></i></button
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/johnatan-dos-santos-reis-945092b7/"
+                target="_blank"
+                ><button><i class="bi bi-linkedin"></i></button
+              ></a>
+            </div>
+            <!--fechamento da div btn-social-->
+          </div>
+        </div>
+        <!--fechamento da div line-footer-->
 
-</body>
+        <div class="line-footer borda">
+          <p>
+            <i class="bi bi-envelope-at-fill"></i
+            ><a href="mailto:johnatan.reiiss@yahoo.com"
+              >johnatan.reiiss@yahoo.com</a
+            >
+          </p>
+        </div>
+        <!--fechamento da div line-footer-->
+      </div>
+      <!--fechamento da div interface-->
+    </footer>
+  </body>
 </html>

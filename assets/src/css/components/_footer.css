@@ -1,0 +1,24 @@
+/* FOOTER */
+footer {
+  padding: 30px 4%;
+  box-shadow: 0 0 40px 10px var(--shadow-color);
+}
+footer .flex {
+  justify-content: space-between;
+  align-items: center;
+}
+footer .line-footer {
+  padding: 20px 0;
+}
+.borda {
+  border-top: 2px solid var(--primary-color);
+}
+footer .line-footer p i {
+  color: var(--primary-color);
+  font-size: 25px;
+  padding: 10px;
+}
+footer .line-footer p a {
+  color: var(--text-color);
+  text-decoration: none;
+}

@@ -1,0 +1,106 @@
+/* COMPONENTE: PORTFOLIO*/
+
+section.portfolio {
+  padding: 80px 4%;
+  box-shadow: 0 0 40px 10px var(--shadow-color);
+}
+
+section.portfolio .flex {
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 60px;
+}
+
+.img-port {
+  width: 360px;
+  height: 460px;
+  background-size: cover;
+  background-position: 100% 0%;
+  transition: background-position 6s ease-in-out;
+  cursor: pointer;
+  border-radius: 40px;
+  position: relative;
+}
+
+.img-port:hover {
+  background-position: 100% 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-bg-color);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+/* --- ESTILO DOS CARDS DE PROJETOS MENORES --- */
+
+.fa-jin-h2 {
+  text-align: center;
+  color: var(--text-color);
+  margin: 65px 4% -35px 4%;
+  font-size: 35px;
+}
+
+.fa-jin-h2 span {
+  color: var(--primary-color);
+}
+
+section.card-projetos {
+  padding: 40px 4%;
+}
+
+section.card-projetos .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-box {
+  color: var(--text-color);
+  padding: 40px;
+  border-radius: 20px;
+  margin-top: 45px;
+  transition: 0.5s;
+  flex: 1 1 200px;
+  max-width: 250px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.638);
+}
+
+.card-box a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.card-box i {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+
+.card-box h3 {
+  font-size: 15px;
+  margin: 5px 0;
+}

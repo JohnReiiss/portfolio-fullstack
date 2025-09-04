@@ -1,0 +1,143 @@
+/* SEÇÃO: SOBRE (CARROSSEL DE CARTAS) */
+
+section.sobre {
+  padding: 80px 4%;
+}
+
+section.sobre .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+/* --- ESTILO DO CARROSSEL DE CARTAS --- */
+
+section.sobre .img-sobre {
+  flex: 1;
+  max-width: 420px;
+}
+
+.card-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* O palco para o efeito 3D */
+.card-stack {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* Estilo individual de cada carta */
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+
+  --i: 0;
+
+  transform: translateZ(calc(abs(var(--i)) * -80px))
+    rotateY(calc(var(--i) * -15deg)) translateX(calc(var(--i) * 60px))
+    scale(calc(1 - abs(var(--i)) * 0.15));
+
+  z-index: calc(10 - abs(var(--i)));
+  transition: transform 0.5s ease-out;
+  opacity: calc(1 - (abs(var(--i)) / 3));
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Navegação do Carrossel */
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 8px 15px;
+  border-radius: 50px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.carousel-nav button {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.carousel-nav button:hover {
+  color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+.nav-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--card-border-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background-color: red;
+}
+
+/* --- ESTILO DO TEXTO --- */
+
+.txt-sobre {
+  color: var(--text-color);
+  flex: 1;
+  max-width: 600px;
+}
+
+.txt-sobre h2 {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.txt-sobre h2 span {
+  color: var(--primary-color);
+  display: block;
+}
+
+.txt-sobre p {
+  margin: 20px 0;
+  text-align: justify;
+  color: var(--text-color-gray);
+}
+
+.txt-sobre p strong {
+  color: var(--text-color);
+  font-weight: 600;
+}

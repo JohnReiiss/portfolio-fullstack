@@ -1,0 +1,237 @@
+/* COMPONENTE: CARROSSEL DE SKILLS */
+
+section#stacks-carousel {
+  padding: 80px 4%;
+}
+section#stacks-carousel .interface {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 40px;
+}
+section#stacks-carousel .interface::before,
+section#stacks-carousel .interface::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+section#stacks-carousel .interface::before {
+  left: 0;
+  background: linear-gradient(to right, var(--background-color), transparent);
+}
+section#stacks-carousel .interface::after {
+  right: 0;
+  background: linear-gradient(to left, var(--background-color), transparent);
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+section#stacks-carousel .flex {
+  display: flex;
+  gap: 60px;
+  width: max-content;
+}
+section#stacks-carousel .flex.scrolling {
+  animation: scroll 60s linear infinite;
+}
+section#stacks-carousel .flex.paused {
+  animation-play-state: paused;
+}
+
+section#stacks-carousel .skills-box {
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid var(--card-border-color);
+  transition: 0.5s;
+  flex: 0 0 180px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section#stacks-carousel .skills-box h3 {
+  font-size: 22px;
+  margin-top: 25px;
+}
+section#stacks-carousel .skills-box svg {
+  width: 70px;
+  height: 70px;
+  fill: var(--primary-color);
+  transition: fill 0.3s ease-in-out;
+}
+section#stacks-carousel .icon-wrapper {
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+section#stacks-carousel .icon-wrapper svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+section#stacks-carousel .icon-wrapper .icon-solid {
+  fill: var(--primary-color);
+  opacity: 1;
+}
+section#stacks-carousel .icon-wrapper .icon-gradient,
+section#stacks-carousel .icon-wrapper .icon-color {
+  opacity: 0;
+}
+section#stacks-carousel .skills-box:hover .icon-wrapper .icon-solid {
+  opacity: 0;
+}
+section#stacks-carousel .skills-box:hover .icon-wrapper .icon-gradient,
+section#stacks-carousel .skills-box:hover .icon-wrapper .icon-color {
+  opacity: 1;
+}
+
+/* 5. EFEITOS DE HOVER INDIVIDUAIS */
+
+/* HTML5 - Laranja */
+section#stacks-carousel .skills-box.html:hover {
+  transform: scale(1.05);
+  border-color: #e44d26;
+  box-shadow: 0 0 20px #e44d26;
+}
+section#stacks-carousel .skills-box.html:hover svg {
+  fill: #e44d26;
+}
+
+/* CSS3 - Azul */
+section#stacks-carousel .skills-box.css:hover {
+  transform: scale(1.05);
+  border-color: #1572b6;
+  box-shadow: 0 0 20px #1572b6;
+}
+section#stacks-carousel .skills-box.css:hover svg {
+  fill: #1572b6;
+}
+
+/* JavaScript - Amarelo */
+section#stacks-carousel .skills-box.js:hover {
+  transform: scale(1.05);
+  border-color: #f0db4f;
+  box-shadow: 0 0 20px #f0db4f;
+}
+section#stacks-carousel .skills-box.js:hover svg {
+  fill: #f0db4f;
+}
+
+/* React - Azul Claro */
+section#stacks-carousel .skills-box.react:hover {
+  transform: scale(1.05);
+  border-color: #61dafb;
+  box-shadow: 0 0 20px #61dafb;
+}
+section#stacks-carousel .skills-box.react:hover svg {
+  fill: #61dafb;
+}
+
+/* React Native - Azul Claro */
+section#stacks-carousel .skills-box.react-native:hover {
+  transform: scale(1.05);
+  border-color: #61dafb;
+  box-shadow: 0 0 20px #61dafb;
+}
+section#stacks-carousel .skills-box.react-native:hover svg {
+  fill: #61dafb;
+}
+
+/* Vite - Roxo */
+section#stacks-carousel .skills-box.vite:hover {
+  transform: scale(1.05);
+  border-color: #646cff;
+  box-shadow: 0 0 20px #646cff;
+}
+
+/* Next.js - Branco */
+section#stacks-carousel .skills-box.nextjs:hover {
+  transform: scale(1.05);
+  border-color: #fff;
+  box-shadow: 0 0 20px #fff;
+}
+section#stacks-carousel .skills-box.nextjs:hover svg {
+  fill: #fff;
+}
+
+/* Node.js - Verde */
+section#stacks-carousel .skills-box.nodejs:hover {
+  transform: scale(1.05);
+  border-color: #3c873a;
+  box-shadow: 0 0 20px #3c873a;
+}
+section#stacks-carousel .skills-box.nodejs:hover svg {
+  fill: #3c873a;
+}
+
+/* PHP - Lilás */
+section#stacks-carousel .skills-box.php:hover {
+  transform: scale(1.05);
+  border-color: #777bb4;
+  box-shadow: 0 0 20px #777bb4;
+}
+section#stacks-carousel .skills-box.php:hover svg {
+  fill: #777bb4;
+}
+
+/* MySQL - Azul Banco de Dados */
+section#stacks-carousel .skills-box.mysql:hover {
+  transform: scale(1.05);
+  border-color: #00758f;
+  box-shadow: 0 0 20px #00758f;
+}
+section#stacks-carousel .skills-box.mysql:hover svg {
+  fill: #00758f;
+}
+
+/* MongoDB - Verde Banco de Dados */
+section#stacks-carousel .skills-box.mongodb:hover {
+  transform: scale(1.05);
+  border-color: #4db33d;
+  box-shadow: 0 0 20px #4db33d;
+}
+section#stacks-carousel .skills-box.mongodb:hover svg {
+  fill: #4db33d;
+}
+
+/* NPM - Vermelho */
+section#stacks-carousel .skills-box.npm:hover {
+  transform: scale(1.05);
+  border-color: #cb3837;
+  box-shadow: 0 0 20px #cb3837;
+}
+
+/* Git - Laranja Escuro */
+section#stacks-carousel .skills-box.git:hover {
+  transform: scale(1.05);
+  border-color: #f05032;
+  box-shadow: 0 0 20px #f05032;
+}
+section#stacks-carousel .skills-box.git:hover svg {
+  fill: #f05032;
+}
+
+/* GitHub - Cinza/Branco */
+section#stacks-carousel .skills-box.github:hover {
+  transform: scale(1.05);
+  border-color: #a0a0a0;
+  box-shadow: 0 0 20px #a0a0a0;
+}
+section#stacks-carousel .skills-box.github:hover svg {
+  fill: #ffffff;
+}
