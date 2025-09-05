@@ -1,0 +1,16 @@
+/* ARQUIVO PRINCIPAL DE ESTILOS */
+
+@import 'global';
+
+@import 'components/header';
+@import 'components/footer';
+@import 'components/buttons';
+@import 'components/carousel';
+@import 'components/portfolio';
+
+@import 'sections/hero';
+@import 'sections/specialties';
+@import 'sections/about';
+@import 'sections/contact';
+
+@import 'responsive';

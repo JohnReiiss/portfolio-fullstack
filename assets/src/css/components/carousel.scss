@@ -1,15 +1,13 @@
-@charset "UTF-8";
 /* COMPONENTE: CARROSSEL DE SKILLS */
+
 section#stacks-carousel {
   padding: 80px 4%;
 }
-
 section#stacks-carousel .interface {
   overflow: hidden;
   position: relative;
   padding-bottom: 40px;
 }
-
 section#stacks-carousel .interface::before,
 section#stacks-carousel .interface::after {
   content: "";
@@ -20,17 +18,14 @@ section#stacks-carousel .interface::after {
   z-index: 2;
   pointer-events: none;
 }
-
 section#stacks-carousel .interface::before {
   left: 0;
   background: linear-gradient(to right, var(--background-color), transparent);
 }
-
 section#stacks-carousel .interface::after {
   right: 0;
   background: linear-gradient(to left, var(--background-color), transparent);
 }
-
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -42,14 +37,11 @@ section#stacks-carousel .interface::after {
 section#stacks-carousel .flex {
   display: flex;
   gap: 60px;
-  width: -moz-max-content;
   width: max-content;
 }
-
 section#stacks-carousel .flex.scrolling {
   animation: scroll 60s linear infinite;
 }
-
 section#stacks-carousel .flex.paused {
   animation-play-state: paused;
 }
@@ -73,20 +65,17 @@ section#stacks-carousel .skills-box h3 {
   font-size: 22px;
   margin-top: 25px;
 }
-
 section#stacks-carousel .skills-box svg {
   width: 70px;
   height: 70px;
   fill: var(--primary-color);
   transition: fill 0.3s ease-in-out;
 }
-
 section#stacks-carousel .icon-wrapper {
   position: relative;
   width: 70px;
   height: 70px;
 }
-
 section#stacks-carousel .icon-wrapper svg {
   width: 100%;
   height: 100%;
@@ -95,34 +84,30 @@ section#stacks-carousel .icon-wrapper svg {
   left: 0;
   transition: opacity 0.3s ease-in-out;
 }
-
 section#stacks-carousel .icon-wrapper .icon-solid {
   fill: var(--primary-color);
   opacity: 1;
 }
-
 section#stacks-carousel .icon-wrapper .icon-gradient,
 section#stacks-carousel .icon-wrapper .icon-color {
   opacity: 0;
 }
-
 section#stacks-carousel .skills-box:hover .icon-wrapper .icon-solid {
   opacity: 0;
 }
-
 section#stacks-carousel .skills-box:hover .icon-wrapper .icon-gradient,
 section#stacks-carousel .skills-box:hover .icon-wrapper .icon-color {
   opacity: 1;
 }
 
 /* 5. EFEITOS DE HOVER INDIVIDUAIS */
+
 /* HTML5 - Laranja */
 section#stacks-carousel .skills-box.html:hover {
   transform: scale(1.05);
   border-color: #e44d26;
   box-shadow: 0 0 20px #e44d26;
 }
-
 section#stacks-carousel .skills-box.html:hover svg {
   fill: #e44d26;
 }
@@ -133,7 +118,6 @@ section#stacks-carousel .skills-box.css:hover {
   border-color: #1572b6;
   box-shadow: 0 0 20px #1572b6;
 }
-
 section#stacks-carousel .skills-box.css:hover svg {
   fill: #1572b6;
 }
@@ -144,7 +128,6 @@ section#stacks-carousel .skills-box.js:hover {
   border-color: #f0db4f;
   box-shadow: 0 0 20px #f0db4f;
 }
-
 section#stacks-carousel .skills-box.js:hover svg {
   fill: #f0db4f;
 }
@@ -155,7 +138,6 @@ section#stacks-carousel .skills-box.react:hover {
   border-color: #61dafb;
   box-shadow: 0 0 20px #61dafb;
 }
-
 section#stacks-carousel .skills-box.react:hover svg {
   fill: #61dafb;
 }
@@ -166,7 +148,6 @@ section#stacks-carousel .skills-box.react-native:hover {
   border-color: #61dafb;
   box-shadow: 0 0 20px #61dafb;
 }
-
 section#stacks-carousel .skills-box.react-native:hover svg {
   fill: #61dafb;
 }
@@ -184,7 +165,6 @@ section#stacks-carousel .skills-box.nextjs:hover {
   border-color: #fff;
   box-shadow: 0 0 20px #fff;
 }
-
 section#stacks-carousel .skills-box.nextjs:hover svg {
   fill: #fff;
 }
@@ -195,7 +175,6 @@ section#stacks-carousel .skills-box.nodejs:hover {
   border-color: #3c873a;
   box-shadow: 0 0 20px #3c873a;
 }
-
 section#stacks-carousel .skills-box.nodejs:hover svg {
   fill: #3c873a;
 }
@@ -206,7 +185,6 @@ section#stacks-carousel .skills-box.php:hover {
   border-color: #777bb4;
   box-shadow: 0 0 20px #777bb4;
 }
-
 section#stacks-carousel .skills-box.php:hover svg {
   fill: #777bb4;
 }
@@ -217,7 +195,6 @@ section#stacks-carousel .skills-box.mysql:hover {
   border-color: #00758f;
   box-shadow: 0 0 20px #00758f;
 }
-
 section#stacks-carousel .skills-box.mysql:hover svg {
   fill: #00758f;
 }
@@ -228,7 +205,6 @@ section#stacks-carousel .skills-box.mongodb:hover {
   border-color: #4db33d;
   box-shadow: 0 0 20px #4db33d;
 }
-
 section#stacks-carousel .skills-box.mongodb:hover svg {
   fill: #4db33d;
 }
@@ -246,7 +222,6 @@ section#stacks-carousel .skills-box.git:hover {
   border-color: #f05032;
   box-shadow: 0 0 20px #f05032;
 }
-
 section#stacks-carousel .skills-box.git:hover svg {
   fill: #f05032;
 }
@@ -257,7 +232,6 @@ section#stacks-carousel .skills-box.github:hover {
   border-color: #a0a0a0;
   box-shadow: 0 0 20px #a0a0a0;
 }
-
 section#stacks-carousel .skills-box.github:hover svg {
   fill: #ffffff;
-}/*# sourceMappingURL=carousel.css.map */
+}

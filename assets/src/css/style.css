@@ -1,20 +1,1028 @@
+@charset "UTF-8";
 /* ARQUIVO PRINCIPAL DE ESTILOS */
+/* ESTILOS GLOBAIS E VARIÁVEIS */
+/* Variáveis de Cor */
+:root {
+  --primary-color: blueviolet;
+  --text-color: #ffffff;
+  --text-color-gray: #8d8d8d;
+  --background-color: #000000;
+  --card-border-color: #252525;
+  --form-bg-color: rgba(128, 128, 128, 0.307);
+  --overlay-bg-color: rgba(0, 0, 0, 0.649);
+  --shadow-color: rgba(255, 255, 255, 0.131);
+}
 
-/* 1. Estilos Globais e Variáveis */
-@import url("global.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-/* 2. Componentes Reutilizáveis */
-@import url("components/_header.css");
-@import url("components/_footer.css");
-@import url("components/_buttons.css");
-@import url("components/_carousel.css");
-@import url("components/_portfolio.css");
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
 
-/* 3. Seções Específicas da Página */
-@import url("sections/_hero.css");
-@import url("sections/_specialties.css");
-@import url("sections/_about.css");
-@import url("sections/_contact.css");
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
 
-/* 4. Regras de Responsividade */
-@import url("responsive.css");
+.flex {
+  display: flex;
+}
+
+h2.titulo {
+  font-size: 38px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+h2.titulo span {
+  color: var(--primary-color);
+}
+
+/* Animação de elevação */
+@keyframes elevar {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px); /* movimento mais sutil */
+  }
+}
+/* HEADER E MENU */
+header {
+  padding: 40px 4%;
+}
+
+header > .interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: var(--text-color-gray);
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+header nav.menu-desktop a:hover {
+  color: var(--text-color);
+  transform: scale(1.05);
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+  display: inline-block;
+  padding: 0 40px;
+}
+
+/* MENU MOBILE */
+.btn-abrir-menu i {
+  color: var(--primary-color);
+  font-size: 40px;
+}
+
+.menu-mobile {
+  background-color: var(--background-color);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  width: 0%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.menu-mobile.abrir-menu {
+  width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu {
+  display: block;
+}
+
+.menu-mobile .btn-fechar {
+  padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i {
+  color: var(--primary-color);
+  font-size: 40px;
+}
+
+.menu-mobile nav ul {
+  text-align: right;
+}
+
+.menu-mobile nav ul li a {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 300;
+  padding: 20px 8%;
+  display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.overlay-menu {
+  background-color: rgba(0, 0, 0, 0.538);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 88888;
+  display: none;
+}
+
+/* FOOTER */
+footer {
+  padding: 30px 4%;
+  box-shadow: 0 0 40px 10px var(--shadow-color);
+}
+
+footer .flex {
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .line-footer {
+  padding: 20px 0;
+}
+
+.borda {
+  border-top: 2px solid var(--primary-color);
+}
+
+footer .line-footer p i {
+  color: var(--primary-color);
+  font-size: 25px;
+  padding: 10px;
+}
+
+footer .line-footer p a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* BOTÕES */
+.btn-contato button {
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: var(--text-color);
+}
+
+button:hover {
+  box-shadow: 0px 0px 8px var(--primary-color);
+  transform: scale(1.05);
+}
+
+.btn-social button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 0;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-size: 25px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: 0.5s;
+}
+
+/* COMPONENTE: CARROSSEL DE SKILLS */
+section#stacks-carousel {
+  padding: 80px 4%;
+}
+
+section#stacks-carousel .interface {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+section#stacks-carousel .interface::before,
+section#stacks-carousel .interface::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+section#stacks-carousel .interface::before {
+  left: 0;
+  background: linear-gradient(to right, var(--background-color), transparent);
+}
+
+section#stacks-carousel .interface::after {
+  right: 0;
+  background: linear-gradient(to left, var(--background-color), transparent);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+section#stacks-carousel .flex {
+  display: flex;
+  gap: 60px;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+section#stacks-carousel .flex.scrolling {
+  animation: scroll 60s linear infinite;
+}
+
+section#stacks-carousel .flex.paused {
+  animation-play-state: paused;
+}
+
+section#stacks-carousel .skills-box {
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid var(--card-border-color);
+  transition: 0.5s;
+  flex: 0 0 180px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section#stacks-carousel .skills-box h3 {
+  font-size: 22px;
+  margin-top: 25px;
+}
+
+section#stacks-carousel .skills-box svg {
+  width: 70px;
+  height: 70px;
+  fill: var(--primary-color);
+  transition: fill 0.3s ease-in-out;
+}
+
+section#stacks-carousel .icon-wrapper {
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+
+section#stacks-carousel .icon-wrapper svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+section#stacks-carousel .icon-wrapper .icon-solid {
+  fill: var(--primary-color);
+  opacity: 1;
+}
+
+section#stacks-carousel .icon-wrapper .icon-gradient,
+section#stacks-carousel .icon-wrapper .icon-color {
+  opacity: 0;
+}
+
+section#stacks-carousel .skills-box:hover .icon-wrapper .icon-solid {
+  opacity: 0;
+}
+
+section#stacks-carousel .skills-box:hover .icon-wrapper .icon-gradient,
+section#stacks-carousel .skills-box:hover .icon-wrapper .icon-color {
+  opacity: 1;
+}
+
+/* 5. EFEITOS DE HOVER INDIVIDUAIS */
+/* HTML5 - Laranja */
+section#stacks-carousel .skills-box.html:hover {
+  transform: scale(1.05);
+  border-color: #e44d26;
+  box-shadow: 0 0 20px #e44d26;
+}
+
+section#stacks-carousel .skills-box.html:hover svg {
+  fill: #e44d26;
+}
+
+/* CSS3 - Azul */
+section#stacks-carousel .skills-box.css:hover {
+  transform: scale(1.05);
+  border-color: #1572b6;
+  box-shadow: 0 0 20px #1572b6;
+}
+
+section#stacks-carousel .skills-box.css:hover svg {
+  fill: #1572b6;
+}
+
+/* JavaScript - Amarelo */
+section#stacks-carousel .skills-box.js:hover {
+  transform: scale(1.05);
+  border-color: #f0db4f;
+  box-shadow: 0 0 20px #f0db4f;
+}
+
+section#stacks-carousel .skills-box.js:hover svg {
+  fill: #f0db4f;
+}
+
+/* React - Azul Claro */
+section#stacks-carousel .skills-box.react:hover {
+  transform: scale(1.05);
+  border-color: #61dafb;
+  box-shadow: 0 0 20px #61dafb;
+}
+
+section#stacks-carousel .skills-box.react:hover svg {
+  fill: #61dafb;
+}
+
+/* React Native - Azul Claro */
+section#stacks-carousel .skills-box.react-native:hover {
+  transform: scale(1.05);
+  border-color: #61dafb;
+  box-shadow: 0 0 20px #61dafb;
+}
+
+section#stacks-carousel .skills-box.react-native:hover svg {
+  fill: #61dafb;
+}
+
+/* Vite - Roxo */
+section#stacks-carousel .skills-box.vite:hover {
+  transform: scale(1.05);
+  border-color: #646cff;
+  box-shadow: 0 0 20px #646cff;
+}
+
+/* Next.js - Branco */
+section#stacks-carousel .skills-box.nextjs:hover {
+  transform: scale(1.05);
+  border-color: #fff;
+  box-shadow: 0 0 20px #fff;
+}
+
+section#stacks-carousel .skills-box.nextjs:hover svg {
+  fill: #fff;
+}
+
+/* Node.js - Verde */
+section#stacks-carousel .skills-box.nodejs:hover {
+  transform: scale(1.05);
+  border-color: #3c873a;
+  box-shadow: 0 0 20px #3c873a;
+}
+
+section#stacks-carousel .skills-box.nodejs:hover svg {
+  fill: #3c873a;
+}
+
+/* PHP - Lilás */
+section#stacks-carousel .skills-box.php:hover {
+  transform: scale(1.05);
+  border-color: #777bb4;
+  box-shadow: 0 0 20px #777bb4;
+}
+
+section#stacks-carousel .skills-box.php:hover svg {
+  fill: #777bb4;
+}
+
+/* MySQL - Azul Banco de Dados */
+section#stacks-carousel .skills-box.mysql:hover {
+  transform: scale(1.05);
+  border-color: #00758f;
+  box-shadow: 0 0 20px #00758f;
+}
+
+section#stacks-carousel .skills-box.mysql:hover svg {
+  fill: #00758f;
+}
+
+/* MongoDB - Verde Banco de Dados */
+section#stacks-carousel .skills-box.mongodb:hover {
+  transform: scale(1.05);
+  border-color: #4db33d;
+  box-shadow: 0 0 20px #4db33d;
+}
+
+section#stacks-carousel .skills-box.mongodb:hover svg {
+  fill: #4db33d;
+}
+
+/* NPM - Vermelho */
+section#stacks-carousel .skills-box.npm:hover {
+  transform: scale(1.05);
+  border-color: #cb3837;
+  box-shadow: 0 0 20px #cb3837;
+}
+
+/* Git - Laranja Escuro */
+section#stacks-carousel .skills-box.git:hover {
+  transform: scale(1.05);
+  border-color: #f05032;
+  box-shadow: 0 0 20px #f05032;
+}
+
+section#stacks-carousel .skills-box.git:hover svg {
+  fill: #f05032;
+}
+
+/* GitHub - Cinza/Branco */
+section#stacks-carousel .skills-box.github:hover {
+  transform: scale(1.05);
+  border-color: #a0a0a0;
+  box-shadow: 0 0 20px #a0a0a0;
+}
+
+section#stacks-carousel .skills-box.github:hover svg {
+  fill: #ffffff;
+}
+
+/* COMPONENTE: PORTFOLIO*/
+section.portfolio {
+  padding: 80px 4%;
+  box-shadow: 0 0 40px 10px var(--shadow-color);
+}
+
+section.portfolio .flex {
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 60px;
+}
+
+.img-port {
+  width: 360px;
+  height: 460px;
+  background-size: cover;
+  background-position: 100% 0%;
+  transition: background-position 6s ease-in-out;
+  cursor: pointer;
+  border-radius: 40px;
+  position: relative;
+}
+
+.img-port:hover {
+  background-position: 100% 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-bg-color);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+/* --- ESTILO DOS CARDS DE PROJETOS MENORES --- */
+.fa-jin-h2 {
+  text-align: center;
+  color: var(--text-color);
+  margin: 65px 4% -35px 4%;
+  font-size: 35px;
+}
+
+.fa-jin-h2 span {
+  color: var(--primary-color);
+}
+
+section.card-projetos {
+  padding: 40px 4%;
+}
+
+section.card-projetos .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-box {
+  color: var(--text-color);
+  padding: 40px;
+  border-radius: 20px;
+  margin-top: 45px;
+  transition: 0.5s;
+  flex: 1 1 200px;
+  max-width: 250px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.638);
+}
+
+.card-box a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.card-box i {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+
+.card-box h3 {
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+/* SEÇÃO: HERO */
+section.topo-do-site {
+  padding: 80px 4%;
+}
+
+section.topo-do-site .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.topo-do-site .txt-topo-site h1 {
+  color: var(--text-color);
+  font-size: 42px;
+  line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+  color: var(--primary-color);
+}
+
+.topo-do-site .txt-topo-site p {
+  color: var(--text-color);
+  margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img {
+  position: relative;
+  animation: elevar 2s ease-in-out infinite alternate;
+}
+
+/* ======================================= */
+/* SEÇÃO: ESPECIALIDADES (TIMELINE)        */
+/* ======================================= */
+section.especialidades {
+  padding: 80px 4%;
+  /* Adicionamos overflow-x: hidden para garantir que os cards
+       não criem uma barra de rolagem horizontal antes de aparecerem */
+  overflow-x: hidden;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+/* A Linha do Tempo Vertical (a barra no centro) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: var(--primary-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: 1;
+  /* ANIMAÇÃO DA BARRA: Estado Inicial */
+  transform: scaleY(0);
+  transform-origin: top; /* Garante que ela cresça de cima para baixo */
+  transition: transform 1s ease-out;
+}
+
+/* O Ponto de Conexão na Linha (agora preenchido) */
+.timeline-dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color); /* Cor de preenchimento */
+  border-radius: 50%;
+  z-index: 2;
+  top: 30px;
+}
+
+/* ANIMAÇÃO DOS CARDS E PONTOS */
+/* Estado Inicial (Antes da Animação) */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  opacity: 0; /* Começam invisíveis */
+  transition: all 0.6s ease-out;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  padding-right: 70px;
+  transform: translateX(-100px); /* Desliza da esquerda */
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  padding-left: 70px;
+  transform: translateX(100px); /* Desliza da direita */
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+  right: -10px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -10px;
+}
+
+/* ESTADO FINAL (QUANDO A SEÇÃO FICA VISÍVEL) */
+/* O JS adiciona a classe .section-visible na section.especialidades */
+.especialidades.section-visible .timeline::after {
+  transform: scaleY(1); /* Faz a barra crescer */
+}
+
+.especialidades.section-visible .timeline-item {
+  opacity: 1;
+  transform: translateX(0); /* Faz os cards deslizarem para a posição final */
+}
+
+/* EFEITO CASCATA (DELAY PARA CADA CARD APARECER) */
+/* A barra leva 1s para crescer, então os cards começam a aparecer depois disso. */
+.especialidades.section-visible .timeline-item:nth-child(1) {
+  transition-delay: 1s;
+}
+
+.especialidades.section-visible .timeline-item:nth-child(2) {
+  transition-delay: 1.2s;
+}
+
+.especialidades.section-visible .timeline-item:nth-child(3) {
+  transition-delay: 1.4s;
+}
+
+.especialidades.section-visible .timeline-item:nth-child(4) {
+  transition-delay: 1.6s;
+}
+
+.especialidades.section-visible .timeline-item:nth-child(5) {
+  transition-delay: 1.8s;
+}
+
+/* ESTILO DOS CARDS (sem alterações significativas) */
+.timeline .skills-box {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #111;
+  border: 1px solid var(--card-border-color);
+  transition: 0.5s;
+}
+
+.timeline .skills-box:hover {
+  transform: scale(1.05);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 15px var(--primary-color);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.card-header svg {
+  width: 35px;
+  height: 35px;
+  fill: var(--primary-color);
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.timeline .skills-box p {
+  text-align: left;
+  color: var(--text-color-gray);
+  font-size: 15px;
+}
+
+/* Casos especiais de ícones */
+.skills-box.figma svg {
+  fill: none;
+}
+
+.skills-box.frontend svg {
+  fill: none;
+  stroke: var(--primary-color);
+  stroke-width: 1.5;
+}
+
+/* SEÇÃO: SOBRE (CARROSSEL DE CARTAS) */
+section.sobre {
+  padding: 80px 4%;
+}
+
+section.sobre .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+/* --- ESTILO DO CARROSSEL DE CARTAS --- */
+section.sobre .img-sobre {
+  flex: 1;
+  max-width: 420px;
+}
+
+.card-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* O palco para o efeito 3D */
+.card-stack {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* Estilo individual de cada carta */
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  --i: 0;
+  transform: translateZ(calc(abs(var(--i)) * -80px)) rotateY(calc(var(--i) * -15deg)) translateX(calc(var(--i) * 60px)) scale(calc(1 - abs(var(--i)) * 0.15));
+  z-index: calc(10 - abs(var(--i)));
+  transition: transform 0.5s ease-out;
+  opacity: calc(1 - abs(var(--i)) / 3);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Navegação do Carrossel */
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 8px 15px;
+  border-radius: 50px;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.carousel-nav button {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.carousel-nav button:hover {
+  color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+.nav-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--card-border-color);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background-color: red;
+}
+
+/* --- ESTILO DO TEXTO --- */
+.txt-sobre {
+  color: var(--text-color);
+  flex: 1;
+  max-width: 600px;
+}
+
+.txt-sobre h2 {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.txt-sobre h2 span {
+  color: var(--primary-color);
+  display: block;
+}
+
+.txt-sobre p {
+  margin: 20px 0;
+  text-align: justify;
+  color: var(--text-color-gray);
+}
+
+.txt-sobre p strong {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* SEÇÃO: FORM */
+section.forms {
+  padding: 80px 4%;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  background-color: var(--form-bg-color);
+  border: 0;
+  outline: 0;
+  padding: 20px 15px;
+  border-radius: 15px;
+  color: var(--text-color);
+  font-size: 18px;
+}
+
+form textarea {
+  resize: none;
+  height: 150px;
+}
+
+form .btn-enviar {
+  margin-top: 20px;
+  text-align: center;
+}
+
+form .btn-enviar input {
+  width: 120px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 18px;
+}
+
+form .btn-enviar input:hover {
+  box-shadow: 0px 0px 8px var(--primary-color);
+  transform: scale(1.05);
+}
+
+/* ESTILOS RESPONSIVOS*/
+@media screen and (max-width: 1020px) {
+  h2.titulo {
+    font-size: 35px;
+    line-height: 30px;
+  }
+  /* HEADER */
+  .menu-desktop,
+  .btn-contato {
+    display: none;
+  }
+  /* HERO (TOPO DO SITE) */
+  section.topo-do-site {
+    padding: 40px 8%;
+  }
+  section.topo-do-site .flex {
+    flex-direction: column-reverse; /* Imagem acima do texto */
+    gap: 40px;
+  }
+  .topo-do-site h1 {
+    font-size: 30px;
+  }
+  .topo-do-site .img-topo-site img {
+    width: 100%;
+  }
+  /* ESPECIALIDADES */
+  section.especialidades {
+    padding: 40px 8%;
+  }
+  section.especialidades .flex {
+    flex-direction: column; /* coluna */
+    gap: 40px;
+  }
+  /* SOBRE */
+  section.sobre {
+    padding: 80px 8%;
+  }
+  section.sobre .flex {
+    flex-direction: column-reverse; /* Imagem acima do texto */
+    gap: 40px;
+  }
+  .sobre .txt-sobre h2 {
+    font-size: 33px;
+    line-height: 35px;
+    text-align: center;
+  }
+  .btn-social {
+    text-align: center;
+  }
+  /* PORTFOLIO */
+  section.portfolio {
+    padding: 80px 8%;
+  }
+  section.portfolio .flex {
+    flex-direction: column; /*coluna */
+    gap: 60px;
+  }
+  .img-port {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  /* FOOTER */
+  footer .flex {
+    flex-direction: column; /*coluna */
+    gap: 20px;
+  }
+  footer .line-footer {
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */

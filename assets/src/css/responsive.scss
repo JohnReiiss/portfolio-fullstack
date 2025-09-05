@@ -1,14 +1,17 @@
 /* ESTILOS RESPONSIVOS*/
+
 @media screen and (max-width: 1020px) {
   h2.titulo {
     font-size: 35px;
     line-height: 30px;
   }
+
   /* HEADER */
   .menu-desktop,
   .btn-contato {
     display: none;
   }
+
   /* HERO (TOPO DO SITE) */
   section.topo-do-site {
     padding: 40px 8%;
@@ -23,6 +26,7 @@
   .topo-do-site .img-topo-site img {
     width: 100%;
   }
+
   /* ESPECIALIDADES */
   section.especialidades {
     padding: 40px 8%;
@@ -31,6 +35,7 @@
     flex-direction: column; /* coluna */
     gap: 40px;
   }
+
   /* SOBRE */
   section.sobre {
     padding: 80px 8%;
@@ -47,6 +52,7 @@
   .btn-social {
     text-align: center;
   }
+
   /* PORTFOLIO */
   section.portfolio {
     padding: 80px 8%;
@@ -60,6 +66,7 @@
     max-width: 360px;
     margin: 0 auto;
   }
+
   /* FOOTER */
   footer .flex {
     flex-direction: column; /*coluna */
@@ -68,4 +75,4 @@
   footer .line-footer {
     text-align: center;
   }
-}/*# sourceMappingURL=responsive.css.map */
+}

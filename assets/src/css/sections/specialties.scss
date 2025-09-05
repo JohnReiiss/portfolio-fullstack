@@ -1,7 +1,7 @@
-@charset "UTF-8";
 /* ======================================= */
 /* SEÇÃO: ESPECIALIDADES (TIMELINE)        */
 /* ======================================= */
+
 section.especialidades {
   padding: 80px 4%;
   /* Adicionamos overflow-x: hidden para garantir que os cards
@@ -26,6 +26,7 @@ section.especialidades {
   left: 50%;
   margin-left: -3px;
   z-index: 1;
+
   /* ANIMAÇÃO DA BARRA: Estado Inicial */
   transform: scaleY(0);
   transform-origin: top; /* Garante que ela cresça de cima para baixo */
@@ -52,23 +53,19 @@ section.especialidades {
   opacity: 0; /* Começam invisíveis */
   transition: all 0.6s ease-out;
 }
-
 .timeline-item:nth-child(odd) {
   left: 0;
   padding-right: 70px;
   transform: translateX(-100px); /* Desliza da esquerda */
 }
-
 .timeline-item:nth-child(even) {
   left: 50%;
   padding-left: 70px;
   transform: translateX(100px); /* Desliza da direita */
 }
-
 .timeline-item:nth-child(odd) .timeline-dot {
   right: -10px;
 }
-
 .timeline-item:nth-child(even) .timeline-dot {
   left: -10px;
 }
@@ -78,7 +75,6 @@ section.especialidades {
 .especialidades.section-visible .timeline::after {
   transform: scaleY(1); /* Faz a barra crescer */
 }
-
 .especialidades.section-visible .timeline-item {
   opacity: 1;
   transform: translateX(0); /* Faz os cards deslizarem para a posição final */
@@ -89,19 +85,15 @@ section.especialidades {
 .especialidades.section-visible .timeline-item:nth-child(1) {
   transition-delay: 1s;
 }
-
 .especialidades.section-visible .timeline-item:nth-child(2) {
   transition-delay: 1.2s;
 }
-
 .especialidades.section-visible .timeline-item:nth-child(3) {
   transition-delay: 1.4s;
 }
-
 .especialidades.section-visible .timeline-item:nth-child(4) {
   transition-delay: 1.6s;
 }
-
 .especialidades.section-visible .timeline-item:nth-child(5) {
   transition-delay: 1.8s;
 }
@@ -114,44 +106,37 @@ section.especialidades {
   border: 1px solid var(--card-border-color);
   transition: 0.5s;
 }
-
 .timeline .skills-box:hover {
   transform: scale(1.05);
   border-color: var(--primary-color);
   box-shadow: 0 0 15px var(--primary-color);
 }
-
 .card-header {
   display: flex;
   align-items: center;
   gap: 15px;
   margin-bottom: 15px;
 }
-
 .card-header svg {
   width: 35px;
   height: 35px;
   fill: var(--primary-color);
 }
-
 .card-header h3 {
   margin: 0;
   font-size: 22px;
 }
-
 .timeline .skills-box p {
   text-align: left;
   color: var(--text-color-gray);
   font-size: 15px;
 }
-
 /* Casos especiais de ícones */
 .skills-box.figma svg {
   fill: none;
 }
-
 .skills-box.frontend svg {
   fill: none;
   stroke: var(--primary-color);
   stroke-width: 1.5;
-}/*# sourceMappingURL=specialties.css.map */
+}
